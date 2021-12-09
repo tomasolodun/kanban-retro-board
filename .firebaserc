@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "retro-board-850f6": {
+      "hosting": {
+        "retro-board": [
+          "retro-board-850f6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "retro-board-850f6"
+  }
+}
