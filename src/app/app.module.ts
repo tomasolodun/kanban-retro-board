@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './shared/routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderModule } from './header/header.module';
+import { HeaderModule } from './board/header.module';
 import { BoardModule } from './board/board.module';
 
 // Firebase services + enviorment module
