@@ -325,10 +325,6 @@ a:not([href]):not([tabindex]):hover {
 }
 
 /* * Content */
-[role="main"] {
-  padding-top: 48px;
-}
-
 .dasboard-text {
   border-left: 1px solid rgb(255, 255, 255, 0.3);
   color: rgb(255, 255, 255, 0.5);
@@ -373,7 +369,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .bg-dark {
-  background-color: #3f51b5 !important;
+  background-color: #3f51b5;
 }
 
 .gap-right {
@@ -446,7 +442,7 @@ input.ng-invalid.ng-touched {
 
 /* Nav */
 body .navbar {
-  padding: 6px 0 !important;
+  padding: 6px 0;
 }
 
 body .navbar-brand {
@@ -459,11 +455,11 @@ body .navbar-brand {
 
 .pt-3,
 .py-3 {
-  padding-top: 2.4rem !important;
+  padding-top: 2.4rem;
 }
 
 .sidebar-sticky {
-  padding-top: 1.2rem !important;
+  padding-top: 1.2rem;
 }
 
 /* Form */
@@ -487,10 +483,6 @@ label {
   color: #a9a6c5;
   font-weight: 300;
   letter-spacing: 0.2px;
-}
-
-[role="main"] {
-  padding-top: 65px;
 }
 
 .preloader {
@@ -517,7 +509,7 @@ label {
 
 .mb-3,
 .my-3 {
-  margin-bottom: 1.4rem !important;
+  margin-bottom: 1.4rem;
 }
 
 .custom-fa-plus {
@@ -598,12 +590,12 @@ body .table thead th {
   }
 
   ul.nav.flex-column {
-    flex-direction: inherit !important;
+    flex-direction: inherit;
   }
 
   .pt-3,
   .py-3 {
-    padding-top: 1.5rem !important;
+    padding-top: 1.5rem;
   }
 
   .brand-logo {
@@ -613,11 +605,11 @@ body .table thead th {
   }
 
   .dasboard-text {
-    display: none !important;
+    display: none;
   }
 
   .sidebar-sticky {
-    padding-top: 1.9rem !important;
+    padding-top: 1.9rem;
     height: auto;
   }
 
@@ -675,7 +667,7 @@ body .table thead th {
 
   .rounded-circle {
     max-width: 150px;
-    margin: 0 auto 20px !important;
+    margin: 0 auto 20px;
     display: block;
   }
 

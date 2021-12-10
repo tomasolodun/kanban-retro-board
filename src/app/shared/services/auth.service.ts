@@ -40,7 +40,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['profile']);
         });
         this.SetUserData(result.user);
       })
@@ -102,7 +102,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['profile']);
         });
         this.SetUserData(result.user);
       })
@@ -137,8 +137,12 @@ export class AuthService {
       this.router.navigate(['sign-in']);
     });
   }
-  // kanban-board
+  // Kanban-board
   Board() {
     return this.router.navigate(['kanban-board']);
+  }
+  // Profile
+  Profile() {
+    return this.router.navigate(['profile']);
   }
 }

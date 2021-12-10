@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { BoardService } from 'src/app/shared/services/board.service';
 @Component({
   selector: 'app-header',
@@ -6,7 +7,8 @@ import { BoardService } from 'src/app/shared/services/board.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(public boardService: BoardService) {}
+  constructor(public boardService: BoardService,
+    public authService: AuthService,) {}
 
   ngOnInit(): void {}
 
@@ -15,4 +17,8 @@ export class HeaderComponent implements OnInit {
       this.boardService.addColumn(event);
     }
   }
+  Profile(){
+    this.authService.Profile();
+  }
+
 }

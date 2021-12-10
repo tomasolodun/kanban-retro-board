@@ -12,7 +12,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
@@ -25,7 +25,7 @@ import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+    ProfileComponent,
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,

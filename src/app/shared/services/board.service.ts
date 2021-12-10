@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { Card, Column, Comment } from '../../models/column.model';
 
@@ -29,9 +30,14 @@ export class BoardService {
 
   private board: Column[] = this.initBoard;
   private board$ = new BehaviorSubject<Column[]>(this.initBoard);
+  public router: Router;
 
   getBoard$() {
     return this.board$.asObservable();
+  }
+  // Profile
+  Profile() {
+    return this.router.navigate(['profile']);
   }
 
   changeColumnColor(color: string, columnId: number) {
