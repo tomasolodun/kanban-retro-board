@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Card, Column, Comment } from '../../models/column.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class BoardService { 
-  private initBoard = [ 
+export class BoardService {
+  private initBoard = [
     {
       id: 1,
       title: 'To Do',
@@ -19,19 +19,19 @@ export class BoardService {
           comments: [
             {
               id: 1,
-              text: 'Some comment'
-            }
-          ]
+              text: 'Some comment',
+            },
+          ],
         },
-      ]
+      ],
     },
-  ]
+  ];
 
-  private board: Column[] = this.initBoard
-  private board$ = new BehaviorSubject<Column[]>(this.initBoard)
+  private board: Column[] = this.initBoard;
+  private board$ = new BehaviorSubject<Column[]>(this.initBoard);
 
   getBoard$() {
-    return this.board$.asObservable()
+    return this.board$.asObservable();
   }
 
   changeColumnColor(color: string, columnId: number) {
@@ -140,19 +140,19 @@ export class BoardService {
 
   deleteComment(columnId, itemId, commentId) {
     this.board = this.board.map((column: Column) => {
-      if(column.id === columnId) {
-        const list = column.list.map((item)=> {
-          if(item.id === itemId) {
+      if (column.id === columnId) {
+        const list = column.list.map((item) => {
+          if (item.id === itemId) {
             item.comments = item.comments.filter((comment: Comment) => {
-              return comment.id !== commentId
-            })
+              return comment.id !== commentId;
+            });
           }
-          return item
-        })
-        column.list = list
+          return item;
+        });
+        column.list = list;
       }
-      return column
-    })
-    this.board$.next([...this.board])
+      return column;
+    });
+    this.board$.next([...this.board]);
   }
 }

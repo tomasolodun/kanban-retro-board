@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between align-items-start mb-2">
   <div class="mt-1">{{ item.text }}</div>
   <button mat-icon-button class="icon-delete" (click)="onCardDelete(item.id)">
-    <mat-icon style="font-size: 18px;">delete</mat-icon>
+    <mat-icon style="font-size: 18px">delete</mat-icon>
   </button>
 </div>
 
@@ -22,7 +22,11 @@
 <div *ngIf="open">
   <mat-form-field class="w-100 mb-2">
     <mat-label>Leave a comment</mat-label>
-    <textarea matInput [(ngModel)]="commentInput" (mousedown)="$event.stopPropagation()"></textarea>
+    <textarea
+      matInput
+      [(ngModel)]="commentInput"
+      (mousedown)="$event.stopPropagation()"
+    ></textarea>
     <button
       mat-button
       *ngIf="commentInput"
@@ -35,6 +39,6 @@
       <mat-icon>done</mat-icon>
     </button>
   </mat-form-field>
-  
+
   <ng-content></ng-content>
 </div>

@@ -13,7 +13,7 @@ export const environment = {
     authDomain: 'retro-board-850f6.firebaseapp.com',
     messagingSenderId: '968573479582',
     measurementId: 'G-S96S9C38M2',
-  }
+  },
 };
 /*
  * For easier debugging in development mode, you can import the following file

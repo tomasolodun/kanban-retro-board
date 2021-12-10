@@ -1,8 +1,12 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 import { BoardService } from 'src/app/shared/services/board.service';
-import { AuthService } from "../../../shared/services/auth.service";
-import { Router } from "@angular/router";
+import { AuthService } from '../../../shared/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-board',
@@ -10,56 +14,65 @@ import { Router } from "@angular/router";
   styleUrls: ['./board.component.scss'],
 })
 export class BoardComponent implements OnInit {
-
   constructor(
-    public boardService: BoardService, public authService: AuthService,
+    public boardService: BoardService,
+    public authService: AuthService,
     public router: Router,
     public ngZone: NgZone
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    console.log('BOARD - INIT')
+    console.log('BOARD - INIT');
   }
 
   onColorChange(color: string, columnId: number) {
-    this.boardService.changeColumnColor(color, columnId)
+    this.boardService.changeColumnColor(color, columnId);
   }
 
   onAddCard(text: string, columnId: number) {
     if (text) {
-      this.boardService.addCard(text, columnId)
+      this.boardService.addCard(text, columnId);
     }
   }
 
   onDeleteColumn(columnId: number) {
-    this.boardService.deleteColumn(columnId)
+    this.boardService.deleteColumn(columnId);
   }
 
   onDeleteCard(cardId: number, columnId: number) {
-    this.boardService.deleteCard(cardId, columnId)
+    this.boardService.deleteCard(cardId, columnId);
   }
 
-  onChangeLike(event: { card: any, increase: boolean }, columnId: number) {
-    const { card: { id }, increase } = event
-    this.boardService.changeLike(id, columnId, increase)
+  onChangeLike(event: { card: any; increase: boolean }, columnId: number) {
+    const {
+      card: { id },
+      increase,
+    } = event;
+    this.boardService.changeLike(id, columnId, increase);
   }
 
-  onAddComment(event: { id: number, text: string }, columnId: number) {
-    this.boardService.addComment(columnId, event.id, event.text)
+  onAddComment(event: { id: number; text: string }, columnId: number) {
+    this.boardService.addComment(columnId, event.id, event.text);
   }
 
   onDeleteComment(comment, columnId, item) {
-    this.boardService.deleteComment(columnId, item.id, comment.id)
+    this.boardService.deleteComment(columnId, item.id, comment.id);
   }
 
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data,
+      moveItemInArray(
         event.container.data,
         event.previousIndex,
-        event.currentIndex);
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
     }
   }
 }

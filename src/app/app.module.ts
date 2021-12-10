@@ -8,8 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BoardModule } from './components/kanban-board/board.module';
 
 // Firebase services + enviorment module
-import { AngularFireModule } from "@angular/fire/compat";
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -19,7 +19,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 // Auth service
-import { AuthService } from "./shared/services/auth.service";
+import { AuthService } from './shared/services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
@@ -29,7 +29,7 @@ import { BrowserModule } from '@angular/platform-browser';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +42,6 @@ import { BrowserModule } from '@angular/platform-browser';
     AngularFirestoreModule,
   ],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

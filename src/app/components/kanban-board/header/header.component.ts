@@ -3,21 +3,16 @@ import { BoardService } from 'src/app/shared/services/board.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  
-  constructor(
-    public boardService: BoardService
-  ) { }
+  constructor(public boardService: BoardService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   addColumn(event: string) {
     if (event) {
-      this.boardService.addColumn(event)
+      this.boardService.addColumn(event);
     }
   }
-
 }

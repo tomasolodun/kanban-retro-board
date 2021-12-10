@@ -7,23 +7,25 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BoardItemComponent implements OnInit {
   @Input() item;
-  @Output() emitText: EventEmitter<{ id: number; text: string }> = new EventEmitter();
-  @Output() emitCardItem: EventEmitter<{ card: any; increase: boolean }> = new EventEmitter();
+  @Output() emitText: EventEmitter<{ id: number; text: string }> =
+    new EventEmitter();
+  @Output() emitCardItem: EventEmitter<{ card: any; increase: boolean }> =
+    new EventEmitter();
   @Output() emitDeleteCard: EventEmitter<number> = new EventEmitter();
-  
-  commentInput = ''
+
+  commentInput = '';
   open = false;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
 
   onOpenComment() {
-    this.open = !this.open
+    this.open = !this.open;
   }
 
   onCommentTextEmit(id: number) {
     this.emitText.emit({ id, text: this.commentInput });
-    this.commentInput = ''
+    this.commentInput = '';
   }
 
   onCardItemEmit(card: any, increase: boolean) {
@@ -31,6 +33,6 @@ export class BoardItemComponent implements OnInit {
   }
 
   onCardDelete(id: number) {
-    this.emitDeleteCard.emit(id)
+    this.emitDeleteCard.emit(id);
   }
 }

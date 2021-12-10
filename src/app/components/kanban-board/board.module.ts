@@ -21,7 +21,7 @@ import { HeaderComponent } from './header/header.component';
     BoardItemComponent,
     CommentItemComponent,
     ColorPanelComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -33,14 +33,10 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     DialogModule,
     MatToolbarModule,
-  ], 
-  exports: [
-    BoardComponent,
-    HeaderComponent
-  ]
+  ],
+  exports: [BoardComponent, HeaderComponent],
 })
-export class BoardModule { }
-
+export class BoardModule {}
 
 // import { NgModule } from '@angular/core';
 // import { CommonModule } from '@angular/common';
