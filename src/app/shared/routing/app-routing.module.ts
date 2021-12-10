@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from '../../components/sign-in/sign-in.component';
 import { SignUpComponent } from '../../components/sign-up/sign-up.component';
 import { DashboardComponent } from '../../components/dashboard/dashboard.component';
-import { BoardComponent } from '../../board/board/board.component';
+import { BoardComponent } from '../../components/kanban-board/board/board.component';
 import { ForgotPasswordComponent } from '../../components/forgot-password/forgot-password.component';
 import { AuthGuard } from "../guard/auth.guard";
 import { VerifyEmailComponent } from '../../components/verify-email/verify-email.component';

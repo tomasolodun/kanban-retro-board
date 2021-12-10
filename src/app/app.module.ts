@@ -5,7 +5,7 @@ import { AppRoutingModule } from './shared/routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { HeaderModule } from './board/header.module';
-import { BoardModule } from './board/board.module';
+import { BoardModule } from './components/kanban-board/board.module';
 
 // Firebase services + enviorment module
 import { AngularFireModule } from "@angular/fire/compat";
