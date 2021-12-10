@@ -96,6 +96,11 @@ export class AuthService {
     return this.AuthLogin(new firebase.auth.GoogleAuthProvider());
   }
 
+  //Sign up with Facebook
+  FacebookAuth() {
+    return this.AuthLogin(new firebase.auth.FacebookAuthProvider());
+  }
+
   // Auth logic to run auth providers
   AuthLogin(provider) {
     return this.afAuth
